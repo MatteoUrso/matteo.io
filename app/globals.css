@@ -1,22 +1,31 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --primary: oklch(0.91 0.1113 199.61);
+  --secondary: oklch(0.87 0.2808 142.69);
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: oklch(0.95 0.029 183.35);
+  --foreground: #000000;
+
+  --black: oklch(0 0 0);
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-shadow: var(--black);
+  --color-border: var(--black);
 
   --font-lexend-mega: var(--font-lexend-mega);
+
+  --spacing-boxShadowX: 4px;
+  --spacing-boxShadowY: 6px;
+
+  --shadow-neobrutalism: 4px 6px 0px 0px var(--color-shadow);
 }
 
 @layer base {
