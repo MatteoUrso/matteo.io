@@ -1,6 +1,8 @@
+import "./globals.css";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Lexend_Mega } from "next/font/google";
-import "./globals.css";
 
 const lexendMega = Lexend_Mega({
   variable: "--font-lexend-mega",
@@ -19,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexendMega.variable} antialiased`}>{children}</body>
+      <body className={`${lexendMega.variable} antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

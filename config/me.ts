@@ -4,7 +4,7 @@ export const Me = {
   fullName: "Matteo Urso",
 
   socials: {
-    github: "https://github.com/MatteoUrso",
+    gitHub: "https://github.com/MatteoUrso",
     linkedIn: "https://www.linkedin.com/in/matteo-urso/",
     twitter: "https://x.com/MatteoUrso2002",
     instagram: "https://www.instagram.com/ursomatteo_/",
