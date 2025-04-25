@@ -1,4 +1,8 @@
+import { navLinks } from "@/constants/nav-links";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+
+//px-3 py-1 font-bold text-black dark:text-white hover:-translate-y-1 hover:rotate-2 transform transition-all duration-200
 
 export function NavBar() {
   return (
@@ -7,31 +11,17 @@ export function NavBar() {
       className="hidden h-full md:flex"
       role="navigation"
     >
-      <ul className="flex items-center justify-center gap-10 text-sm">
-        <li>
-          <Link
-            href="/projects"
-            className="group text-text hover:underline hover:decoration-current hover:decoration-2 hover:underline-offset-4"
+      <ul className="flex h-full items-center gap-4">
+        {navLinks.map((link) => (
+          <li
+            key={link.href}
+            className="group px-3 py-1 transition-all duration-200 hover:-translate-y-2 hover:rotate-2"
           >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/blog"
-            className="group text-text hover:underline hover:decoration-current hover:decoration-2 hover:underline-offset-4"
-          >
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            className="group text-text hover:underline hover:decoration-current hover:decoration-2 hover:underline-offset-4"
-          >
-            About
-          </Link>
-        </li>
+            <Link href={link.href} className={cn("font-normal")} scroll>
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -41,10 +41,11 @@ export function Header() {
     >
       <div className="shadow-neobrutalism bg-header-background container mx-auto flex h-full items-center justify-between border-4 border-black px-6">
         {/** LOGO */}
-        <h1 className="group text-2xl font-bold">
+        <h1 className="group">
           <Link
             href="/"
             className={cn(
+              "text-2xl font-bold",
               "group-hover:underline group-hover:decoration-current group-hover:decoration-2 group-hover:underline-offset-4",
               "focus-visible:ring-offset-header-background focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:outline-none"
             )}

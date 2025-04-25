@@ -11,6 +11,7 @@ export function Socials() {
           href={Me.socials.gitHub}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub profile"
         >
           <Icons.gitHub />
         </Link>
@@ -20,6 +21,7 @@ export function Socials() {
           href={Me.socials.twitter}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Twitter profile"
         >
           <Icons.twitter />
         </Link>
@@ -29,6 +31,7 @@ export function Socials() {
           href={Me.socials.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
         >
           <Icons.linkedIn />
         </Link>

@@ -1,12 +1,11 @@
-import { Icons } from "@/components/icons";
-import { Button } from "@/components/ui/button";
+import { Hero } from "@/components/hero";
+import { Projects } from "@/components/projects";
 
 export default function Page() {
   return (
-    <main className="flex h-screen w-full items-center justify-center">
-      <Button size="icon">
-        <Icons.gitHub />
-      </Button>
+    <main>
+      <Hero />
+      <Projects />
     </main>
   );
 }
